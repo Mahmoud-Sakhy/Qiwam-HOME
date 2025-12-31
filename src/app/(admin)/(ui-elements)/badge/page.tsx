@@ -5,46 +5,46 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Next.js Badge | TailAdmin - Next.js Dashboard Template",
+  title: "الشارات Next.js | TailAdmin - قالب لوحة تحكم Next.js",
   description:
-    "This is Next.js Badge page for TailAdmin - Next.js Tailwind CSS Admin Dashboard Template",
-  // other metadata
+    "هذه صفحة الشارات لـ Next.js في TailAdmin - قالب لوحة تحكم Next.js باستخدام Tailwind CSS",
+  // بيانات وصفية أخرى
 };
 
 export default function BadgePage() {
   return (
     <div>
-      <PageBreadcrumb pageTitle="Badges" />
+      <PageBreadcrumb pageTitle="الشارات" />
       <div className="space-y-5 sm:space-y-6">
         <div className="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
           <div className="px-6 py-5">
             <h3 className="text-base font-medium text-gray-800 dark:text-white/90">
-              With Light Background
+              بخلفية فاتحة
             </h3>
           </div>
           <div className="p-6 border-t border-gray-100 dark:border-gray-800 xl:p-10">
             <div className="flex flex-wrap gap-4 sm:items-center sm:justify-center">
-              {/* Light Variant */}
+              {/* نوع فاتح */}
               <Badge variant="light" color="primary">
-                Primary
+                أساسي
               </Badge>
               <Badge variant="light" color="success">
-                Success
+                نجاح
               </Badge>{" "}
               <Badge variant="light" color="error">
-                Error
+                خطأ
               </Badge>{" "}
               <Badge variant="light" color="warning">
-                Warning
+                تحذير
               </Badge>{" "}
               <Badge variant="light" color="info">
-                Info
+                معلومات
               </Badge>
               <Badge variant="light" color="light">
-                Light
+                فاتح
               </Badge>
               <Badge variant="light" color="dark">
-                Dark
+                داكن
               </Badge>
             </div>
           </div>
@@ -53,32 +53,32 @@ export default function BadgePage() {
         <div className="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
           <div className="px-6 py-5">
             <h3 className="text-base font-medium text-gray-800 dark:text-white/90">
-              With Solid Background
+              بخلفية صلبة
             </h3>
           </div>
           <div className="p-6 border-t border-gray-100 dark:border-gray-800 xl:p-10">
             <div className="flex flex-wrap gap-4 sm:items-center sm:justify-center">
-              {/* Light Variant */}
+              {/* نوع صلب */}
               <Badge variant="solid" color="primary">
-                Primary
+                أساسي
               </Badge>
               <Badge variant="solid" color="success">
-                Success
+                نجاح
               </Badge>{" "}
               <Badge variant="solid" color="error">
-                Error
+                خطأ
               </Badge>{" "}
               <Badge variant="solid" color="warning">
-                Warning
+                تحذير
               </Badge>{" "}
               <Badge variant="solid" color="info">
-                Info
+                معلومات
               </Badge>
               <Badge variant="solid" color="light">
-                Light
+                فاتح
               </Badge>
               <Badge variant="solid" color="dark">
-                Dark
+                داكن
               </Badge>
             </div>
           </div>
@@ -87,31 +87,31 @@ export default function BadgePage() {
         <div className="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
           <div className="px-6 py-5">
             <h3 className="text-base font-medium text-gray-800 dark:text-white/90">
-              Light Background with Left Icon
+              خلفية فاتحة مع أيقونة يسارية
             </h3>
           </div>
           <div className="p-6 border-t border-gray-100 dark:border-gray-800 xl:p-10">
             <div className="flex flex-wrap gap-4 sm:items-center sm:justify-center">
               <Badge variant="light" color="primary" startIcon={<PlusIcon />}>
-                Primary
+                أساسي
               </Badge>
               <Badge variant="light" color="success" startIcon={<PlusIcon />}>
-                Success
+                نجاح
               </Badge>{" "}
               <Badge variant="light" color="error" startIcon={<PlusIcon />}>
-                Error
+                خطأ
               </Badge>{" "}
               <Badge variant="light" color="warning" startIcon={<PlusIcon />}>
-                Warning
+                تحذير
               </Badge>{" "}
               <Badge variant="light" color="info" startIcon={<PlusIcon />}>
-                Info
+                معلومات
               </Badge>
               <Badge variant="light" color="light" startIcon={<PlusIcon />}>
-                Light
+                فاتح
               </Badge>
               <Badge variant="light" color="dark" startIcon={<PlusIcon />}>
-                Dark
+                داكن
               </Badge>
             </div>
           </div>
@@ -120,31 +120,31 @@ export default function BadgePage() {
         <div className="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
           <div className="px-6 py-5">
             <h3 className="text-base font-medium text-gray-800 dark:text-white/90">
-              Solid Background with Left Icon
+              خلفية صلبة مع أيقونة يسارية
             </h3>
           </div>
           <div className="p-6 border-t border-gray-100 dark:border-gray-800 xl:p-10">
             <div className="flex flex-wrap gap-4 sm:items-center sm:justify-center">
               <Badge variant="solid" color="primary" startIcon={<PlusIcon />}>
-                Primary
+                أساسي
               </Badge>
               <Badge variant="solid" color="success" startIcon={<PlusIcon />}>
-                Success
+                نجاح
               </Badge>{" "}
               <Badge variant="solid" color="error" startIcon={<PlusIcon />}>
-                Error
+                خطأ
               </Badge>{" "}
               <Badge variant="solid" color="warning" startIcon={<PlusIcon />}>
-                Warning
+                تحذير
               </Badge>{" "}
               <Badge variant="solid" color="info" startIcon={<PlusIcon />}>
-                Info
+                معلومات
               </Badge>
               <Badge variant="solid" color="light" startIcon={<PlusIcon />}>
-                Light
+                فاتح
               </Badge>
               <Badge variant="solid" color="dark" startIcon={<PlusIcon />}>
-                Dark
+                داكن
               </Badge>
             </div>
           </div>
@@ -153,31 +153,31 @@ export default function BadgePage() {
         <div className="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
           <div className="px-6 py-5">
             <h3 className="text-base font-medium text-gray-800 dark:text-white/90">
-              Light Background with Right Icon
+              خلفية فاتحة مع أيقونة يمينية
             </h3>
           </div>
           <div className="p-6 border-t border-gray-100 dark:border-gray-800 xl:p-10">
             <div className="flex flex-wrap gap-4 sm:items-center sm:justify-center">
               <Badge variant="light" color="primary" endIcon={<PlusIcon />}>
-                Primary
+                أساسي
               </Badge>
               <Badge variant="light" color="success" endIcon={<PlusIcon />}>
-                Success
+                نجاح
               </Badge>{" "}
               <Badge variant="light" color="error" endIcon={<PlusIcon />}>
-                Error
+                خطأ
               </Badge>{" "}
               <Badge variant="light" color="warning" endIcon={<PlusIcon />}>
-                Warning
+                تحذير
               </Badge>{" "}
               <Badge variant="light" color="info" endIcon={<PlusIcon />}>
-                Info
+                معلومات
               </Badge>
               <Badge variant="light" color="light" endIcon={<PlusIcon />}>
-                Light
+                فاتح
               </Badge>
               <Badge variant="light" color="dark" endIcon={<PlusIcon />}>
-                Dark
+                داكن
               </Badge>
             </div>
           </div>
@@ -186,31 +186,31 @@ export default function BadgePage() {
         <div className="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
           <div className="px-6 py-5">
             <h3 className="text-base font-medium text-gray-800 dark:text-white/90">
-              Solid Background with Right Icon
+              خلفية صلبة مع أيقونة يمينية
             </h3>
           </div>
           <div className="p-6 border-t border-gray-100 dark:border-gray-800 xl:p-10">
             <div className="flex flex-wrap gap-4 sm:items-center sm:justify-center">
               <Badge variant="solid" color="primary" endIcon={<PlusIcon />}>
-                Primary
+                أساسي
               </Badge>
               <Badge variant="solid" color="success" endIcon={<PlusIcon />}>
-                Success
+                نجاح
               </Badge>{" "}
               <Badge variant="solid" color="error" endIcon={<PlusIcon />}>
-                Error
+                خطأ
               </Badge>{" "}
               <Badge variant="solid" color="warning" endIcon={<PlusIcon />}>
-                Warning
+                تحذير
               </Badge>{" "}
               <Badge variant="solid" color="info" endIcon={<PlusIcon />}>
-                Info
+                معلومات
               </Badge>
               <Badge variant="solid" color="light" endIcon={<PlusIcon />}>
-                Light
+                فاتح
               </Badge>
               <Badge variant="solid" color="dark" endIcon={<PlusIcon />}>
-                Dark
+                داكن
               </Badge>
             </div>
           </div>

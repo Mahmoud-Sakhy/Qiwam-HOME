@@ -5,18 +5,18 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Next.js Avatars | TailAdmin - Next.js Dashboard Template",
+  title: "الصور الرمزية Next.js | TailAdmin - قالب لوحة تحكم Next.js",
   description:
-    "This is Next.js Avatars page for TailAdmin - Next.js Tailwind CSS Admin Dashboard Template",
+    "هذه صفحة الصور الرمزية لـ Next.js في TailAdmin - قالب لوحة تحكم Next.js باستخدام Tailwind CSS",
 };
 
 export default function AvatarPage() {
   return (
     <div>
-      <PageBreadcrumb pageTitle="Avatar" />
+      <PageBreadcrumb pageTitle="الصور الرمزية" />
       <div className="space-y-5 sm:space-y-6">
-        <ComponentCard title="Default Avatar">
-          {/* Default Avatar (No Status) */}
+        <ComponentCard title="الصور الرمزية الافتراضية">
+          {/* الصور الرمزية الافتراضية (بدون حالة) */}
           <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">
             <Avatar src="/images/user/user-01.jpg" size="xsmall" />
             <Avatar src="/images/user/user-01.jpg" size="small" />
@@ -26,7 +26,8 @@ export default function AvatarPage() {
             <Avatar src="/images/user/user-01.jpg" size="xxlarge" />
           </div>
         </ComponentCard>
-        <ComponentCard title="Avatar with online indicator">
+        
+        <ComponentCard title="الصور الرمزية مع مؤشر الاتصال">
           <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">
             <Avatar
               src="/images/user/user-01.jpg"
@@ -60,7 +61,8 @@ export default function AvatarPage() {
             />
           </div>
         </ComponentCard>
-        <ComponentCard title="Avatar with Offline indicator">
+        
+        <ComponentCard title="الصور الرمزية مع مؤشر عدم الاتصال">
           <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">
             <Avatar
               src="/images/user/user-01.jpg"
@@ -93,8 +95,9 @@ export default function AvatarPage() {
               status="offline"
             />
           </div>
-        </ComponentCard>{" "}
-        <ComponentCard title="Avatar with busy indicator">
+        </ComponentCard>
+        
+        <ComponentCard title="الصور الرمزية مع مؤشر مشغول">
           <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">
             <Avatar
               src="/images/user/user-01.jpg"

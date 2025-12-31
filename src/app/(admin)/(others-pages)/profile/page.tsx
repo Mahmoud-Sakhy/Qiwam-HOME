@@ -5,9 +5,9 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Next.js Profile | TailAdmin - Next.js Dashboard Template",
+  title: "ملف تعريف Next.js | TailAdmin - قالب لوحة تحكم Next.js",
   description:
-    "This is Next.js Profile page for TailAdmin - Next.js Tailwind CSS Admin Dashboard Template",
+    "هذه صفحة تعريف Next.js الخاصة بـ TailAdmin - قالب لوحة تحكم إدارة CSS لـ Next.js Tailwind",
 };
 
 export default function Profile() {
@@ -15,7 +15,7 @@ export default function Profile() {
     <div>
       <div className="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] lg:p-6">
         <h3 className="mb-5 text-lg font-semibold text-gray-800 dark:text-white/90 lg:mb-7">
-          Profile
+          الملف الشخصي
         </h3>
         <div className="space-y-6">
           <UserMetaCard />

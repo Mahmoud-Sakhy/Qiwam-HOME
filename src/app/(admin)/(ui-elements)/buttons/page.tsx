@@ -6,80 +6,85 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Next.js Buttons | TailAdmin - Next.js Dashboard Template",
+  title: "الأزرار Next.js | TailAdmin - قالب لوحة تحكم Next.js",
   description:
-    "This is Next.js Buttons page for TailAdmin - Next.js Tailwind CSS Admin Dashboard Template",
+    "هذه صفحة الأزرار لـ Next.js في TailAdmin - قالب لوحة تحكم Next.js باستخدام Tailwind CSS",
 };
 
 export default function Buttons() {
   return (
     <div>
-      <PageBreadcrumb pageTitle="Buttons" />
+      <PageBreadcrumb pageTitle="الأزرار" />
       <div className="space-y-5 sm:space-y-6">
-        {/* Primary Button */}
-        <ComponentCard title="Primary Button">
+        {/* زر أساسي */}
+        <ComponentCard title="زر أساسي">
           <div className="flex items-center gap-5">
             <Button size="sm" variant="primary">
-              Button Text
+              نص الزر
             </Button>
             <Button size="md" variant="primary">
-              Button Text
+              نص الزر
             </Button>
           </div>
         </ComponentCard>
-        {/* Primary Button with Start Icon */}
-        <ComponentCard title="Primary Button with Left Icon">
+        
+        {/* زر أساسي مع أيقونة يسارية */}
+        <ComponentCard title="زر أساسي مع أيقونة يسارية">
           <div className="flex items-center gap-5">
             <Button size="sm" variant="primary" startIcon={<BoxIcon />}>
-              Button Text
+              نص الزر
             </Button>
             <Button size="md" variant="primary" startIcon={<BoxIcon />}>
-              Button Text
+              نص الزر
             </Button>
           </div>
-        </ComponentCard>{" "}
-        {/* Primary Button with Start Icon */}
-        <ComponentCard title="Primary Button with Right Icon">
+        </ComponentCard>
+        
+        {/* زر أساسي مع أيقونة يمينية */}
+        <ComponentCard title="زر أساسي مع أيقونة يمينية">
           <div className="flex items-center gap-5">
             <Button size="sm" variant="primary" endIcon={<BoxIcon />}>
-              Button Text
+              نص الزر
             </Button>
             <Button size="md" variant="primary" endIcon={<BoxIcon />}>
-              Button Text
+              نص الزر
             </Button>
           </div>
         </ComponentCard>
-        {/* Outline Button */}
-        <ComponentCard title="Secondary Button">
+        
+        {/* زر ثانوي */}
+        <ComponentCard title="زر ثانوي">
           <div className="flex items-center gap-5">
-            {/* Outline Button */}
+            {/* زر مخطط */}
             <Button size="sm" variant="outline">
-              Button Text
+              نص الزر
             </Button>
             <Button size="md" variant="outline">
-              Button Text
+              نص الزر
             </Button>
           </div>
         </ComponentCard>
-        {/* Outline Button with Start Icon */}
-        <ComponentCard title="Outline Button with Left Icon">
+        
+        {/* زر مخطط مع أيقونة يسارية */}
+        <ComponentCard title="زر مخطط مع أيقونة يسارية">
           <div className="flex items-center gap-5">
             <Button size="sm" variant="outline" startIcon={<BoxIcon />}>
-              Button Text
+              نص الزر
             </Button>
             <Button size="md" variant="outline" startIcon={<BoxIcon />}>
-              Button Text
+              نص الزر
             </Button>
           </div>
-        </ComponentCard>{" "}
-        {/* Outline Button with Start Icon */}
-        <ComponentCard title="Outline Button with Right Icon">
+        </ComponentCard>
+        
+        {/* زر مخطط مع أيقونة يمينية */}
+        <ComponentCard title="زر مخطط مع أيقونة يمينية">
           <div className="flex items-center gap-5">
             <Button size="sm" variant="outline" endIcon={<BoxIcon />}>
-              Button Text
+              نص الزر
             </Button>
             <Button size="md" variant="outline" endIcon={<BoxIcon />}>
-              Button Text
+              نص الزر
             </Button>
           </div>
         </ComponentCard>
