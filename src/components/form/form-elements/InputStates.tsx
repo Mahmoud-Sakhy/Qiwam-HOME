@@ -8,7 +8,7 @@ export default function InputStates() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
 
-  // Simulate a validation check
+  // التحقق من صحة البريد الإلكتروني
   const validateEmail = (value: string) => {
     const isValidEmail =
       /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
@@ -21,47 +21,48 @@ export default function InputStates() {
     setEmail(value);
     validateEmail(value);
   };
+
   return (
     <ComponentCard
-      title="Input States"
-      desc="Validation styles for error, success and disabled states on form controls."
+      title="حالات الإدخال"
+      desc="أنماط التحقق من الصحة لحالات الخطأ والنجاح والتعطيل في عناصر النموذج."
     >
-      <div className="space-y-5 sm:space-y-6">
-        {/* Error Input */}
+      <div className="space-y-5 sm:space-y-6" dir="rtl">
+        {/* حقل إدخال مع خطأ */}
         <div>
-          <Label>Email</Label>
+          <Label>البريد الإلكتروني</Label>
           <Input
             type="email"
             defaultValue={email}
             error={error}
             onChange={handleEmailChange}
-            placeholder="Enter your email"
-            hint={error ? "This is an invalid email address." : ""}
+            placeholder="أدخل بريدك الإلكتروني"
+            hint={error ? "هذا عنوان بريد إلكتروني غير صالح." : ""}
           />
         </div>
 
-        {/* Success Input */}
+        {/* حقل إدخال ناجح */}
         <div>
-          <Label>Email</Label>
+          <Label>البريد الإلكتروني</Label>
           <Input
             type="email"
             defaultValue={email}
-            success={!error}
+            success={!error && email !== ""}
             onChange={handleEmailChange}
-            placeholder="Enter your email"
-            hint={!error ? "Valid email!" : ""}
+            placeholder="أدخل بريدك الإلكتروني"
+            hint={!error && email !== "" ? "بريد إلكتروني صالح!" : ""}
           />
         </div>
 
-        {/* Disabled Input */}
+        {/* حقل إدخال معطل */}
         <div>
-          <Label>Email</Label>
+          <Label>البريد الإلكتروني</Label>
           <Input
             type="text"
             defaultValue="disabled@example.com"
             disabled={true}
-            placeholder="Disabled email"
-            hint="This field is disabled."
+            placeholder="بريد إلكتروني معطل"
+            hint="هذا الحقل معطل."
           />
         </div>
       </div>

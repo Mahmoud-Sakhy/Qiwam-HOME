@@ -17,54 +17,54 @@ interface Product {
   price: string; // Price of the product (as a string with currency symbol)
   // status: string; // Status of the product
   image: string; // URL or path to the product image
-  status: "Delivered" | "Pending" | "Canceled"; // Status of the product
+  status: "تم التوصيل" | "قيد الانتظار" | "ملغى"; // Status of the product
 }
 
 // Define the table data using the interface
 const tableData: Product[] = [
   {
     id: 1,
-    name: "MacBook Pro 13”",
-    variants: "2 Variants",
-    category: "Laptop",
-    price: "$2399.00",
-    status: "Delivered",
+    name: "ماك بوك برو ١٣ بوصة",
+    variants: "نوعان",
+    category: "لابتوب",
+    price: "٢٣٩٩٫٠٠ دولار",
+    status: "تم التوصيل",
     image: "/images/product/product-01.jpg", // Replace with actual image URL
   },
   {
     id: 2,
-    name: "Apple Watch Ultra",
-    variants: "1 Variant",
-    category: "Watch",
-    price: "$879.00",
-    status: "Pending",
+    name: "أبل ووتش أولترا",
+    variants: "نوع واحد",
+    category: "ساعة",
+    price: "٨٧٩٫٠٠ دولار",
+    status: "قيد الانتظار",
     image: "/images/product/product-02.jpg", // Replace with actual image URL
   },
   {
     id: 3,
-    name: "iPhone 15 Pro Max",
-    variants: "2 Variants",
-    category: "SmartPhone",
-    price: "$1869.00",
-    status: "Delivered",
+    name: "آيفون ١٥ برو ماكس",
+    variants: "نوعان",
+    category: "هاتف ذكي",
+    price: "١٨٦٩٫٠٠ دولار",
+    status: "تم التوصيل",
     image: "/images/product/product-03.jpg", // Replace with actual image URL
   },
   {
     id: 4,
-    name: "iPad Pro 3rd Gen",
-    variants: "2 Variants",
-    category: "Electronics",
-    price: "$1699.00",
-    status: "Canceled",
+    name: "آيباد برو الجيل الثالث",
+    variants: "نوعان",
+    category: "إلكترونيات",
+    price: "١٦٩٩٫٠٠ دولار",
+    status: "ملغى",
     image: "/images/product/product-04.jpg", // Replace with actual image URL
   },
   {
     id: 5,
-    name: "AirPods Pro 2nd Gen",
-    variants: "1 Variant",
-    category: "Accessories",
-    price: "$240.00",
-    status: "Delivered",
+    name: "إيربودز برو الجيل الثاني",
+    variants: "نوع واحد",
+    category: "ملحقات",
+    price: "٢٤٠٫٠٠ دولار",
+    status: "تم التوصيل",
     image: "/images/product/product-05.jpg", // Replace with actual image URL
   },
 ];
@@ -75,7 +75,7 @@ export default function RecentOrders() {
       <div className="flex flex-col gap-2 mb-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-            Recent Orders
+            الطلبات الحديثة
           </h3>
         </div>
 
@@ -116,10 +116,10 @@ export default function RecentOrders() {
                 strokeWidth="1.5"
               />
             </svg>
-            Filter
+            تصفية
           </button>
           <button className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-theme-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-200">
-            See all
+            عرض الكل
           </button>
         </div>
       </div>
@@ -132,25 +132,25 @@ export default function RecentOrders() {
                 isHeader
                 className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
               >
-                Products
+                المنتجات
               </TableCell>
               <TableCell
                 isHeader
                 className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
               >
-                Category
+                السعر
               </TableCell>
               <TableCell
                 isHeader
                 className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
               >
-                Price
+                الفئة
               </TableCell>
               <TableCell
                 isHeader
                 className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
               >
-                Status
+                الحالة
               </TableCell>
             </TableRow>
           </TableHeader>
@@ -191,9 +191,9 @@ export default function RecentOrders() {
                   <Badge
                     size="sm"
                     color={
-                      product.status === "Delivered"
+                      product.status === "تم التوصيل"
                         ? "success"
-                        : product.status === "Pending"
+                        : product.status === "قيد الانتظار"
                         ? "warning"
                         : "error"
                     }

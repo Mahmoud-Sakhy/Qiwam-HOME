@@ -9,16 +9,17 @@ export default function RadioButtons() {
   const handleRadioChange = (value: string) => {
     setSelectedValue(value);
   };
+
   return (
-    <ComponentCard title="Radio Buttons">
-      <div className="flex flex-wrap items-center gap-8">
+    <ComponentCard title="أزرار الراديو">
+      <div className="flex flex-wrap items-center gap-8" dir="rtl">
         <Radio
           id="radio1"
           name="group1"
           value="option1"
           checked={selectedValue === "option1"}
           onChange={handleRadioChange}
-          label="Default"
+          label="افتراضي"
         />
         <Radio
           id="radio2"
@@ -26,7 +27,7 @@ export default function RadioButtons() {
           value="option2"
           checked={selectedValue === "option2"}
           onChange={handleRadioChange}
-          label="Selected"
+          label="محدد"
         />
         <Radio
           id="radio3"
@@ -34,7 +35,7 @@ export default function RadioButtons() {
           value="option3"
           checked={selectedValue === "option3"}
           onChange={handleRadioChange}
-          label="Disabled"
+          label="معطل"
           disabled={true}
         />
       </div>
