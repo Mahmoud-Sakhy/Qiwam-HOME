@@ -13,9 +13,9 @@ export default function VerticallyCenteredModal() {
     closeModal();
   };
   return (
-    <ComponentCard title="Vertically Centered Modal">
+    <ComponentCard title="النافذة المنبثقة المتمركزة عمودياً">
       <Button size="sm" onClick={openModal}>
-        Open Modal
+        فتح النافذة المنبثقة
       </Button>
       <Modal
         isOpen={isOpen}
@@ -25,19 +25,18 @@ export default function VerticallyCenteredModal() {
       >
         <div className="text-center">
           <h4 className="mb-2 text-2xl font-semibold text-gray-800 dark:text-white/90 sm:text-title-sm">
-            All Done! Success Confirmed
+            تم الإكمال! تأكيد النجاح
           </h4>
           <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque euismod est quis mauris lacinia pharetra.
+            تم إنجاز المهمة بنجاح وتأكيدها. كل شيء يعمل كما هو مخطط له.
           </p>
 
           <div className="flex items-center justify-center w-full gap-3 mt-8">
             <Button size="sm" variant="outline" onClick={closeModal}>
-              Close
+              إغلاق
             </Button>
             <Button size="sm" onClick={handleSave}>
-              Save Changes
+              حفظ التغييرات
             </Button>
           </div>
         </div>

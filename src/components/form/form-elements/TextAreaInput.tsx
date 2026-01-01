@@ -7,34 +7,41 @@ import Label from "../Label";
 export default function TextAreaInput() {
   const [message, setMessage] = useState("");
   const [messageTwo, setMessageTwo] = useState("");
+
   return (
-    <ComponentCard title="Textarea input field">
-      <div className="space-y-6">
-        {/* Default TextArea */}
+    <ComponentCard title="حقل المنطقة النصية (Textarea)">
+      <div className="space-y-6" dir="rtl">
+        {/* حقل نصي افتراضي */}
         <div>
-          <Label>Description</Label>
+          <Label>الوصف</Label>
           <TextArea
             value={message}
             onChange={(value) => setMessage(value)}
             rows={6}
+            placeholder="أدخل وصفًا هنا..."
           />
         </div>
 
-        {/* Disabled TextArea */}
+        {/* حقل نصي معطل */}
         <div>
-          <Label>Description</Label>
-          <TextArea rows={6} disabled />
+          <Label>الوصف</Label>
+          <TextArea
+            rows={6}
+            disabled
+            placeholder="هذا الحقل معطل"
+          />
         </div>
 
-        {/* Error TextArea */}
+        {/* حقل نصي مع خطأ */}
         <div>
-          <Label>Description</Label>
+          <Label>الوصف</Label>
           <TextArea
             rows={6}
             value={messageTwo}
             error
             onChange={(value) => setMessageTwo(value)}
-            hint="Please enter a valid message."
+            hint="الرجاء إدخال رسالة صالحة."
+            placeholder="أدخل رسالتك هنا..."
           />
         </div>
       </div>

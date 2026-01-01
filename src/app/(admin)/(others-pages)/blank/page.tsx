@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Next.js Blank Page | TailAdmin - Next.js Dashboard Template",
-  description: "This is Next.js Blank Page TailAdmin Dashboard Template",
+  title: "صفحة فارغة في Next.js | TailAdmin - قالب لوحة تحكم Next.js",
+  description: "هذا قالب لوحة تحكم TailAdmin لصفحة فارغة باستخدام Next.js",
 };
 
 export default function BlankPage() {
@@ -14,11 +14,11 @@ export default function BlankPage() {
       <div className="min-h-screen rounded-2xl border border-gray-200 bg-white px-5 py-7 dark:border-gray-800 dark:bg-white/[0.03] xl:px-10 xl:py-12">
         <div className="mx-auto w-full max-w-[630px] text-center">
           <h3 className="mb-4 font-semibold text-gray-800 text-theme-xl dark:text-white/90 sm:text-2xl">
-            Card Title Here
+            عنوان البطاقة هنا
           </h3>
           <p className="text-sm text-gray-500 dark:text-gray-400 sm:text-base">
-            Start putting content on grids or panels, you can also use different
-            combinations of grids.Please check out the dashboard and other pages
+ابدأ بوضع المحتوى على الشبكات أو اللوحات، ويمكنك أيضًا استخدام مجموعات مختلفة من الشبكات.
+يرجى الاطلاع على لوحة التحكم والصفحات الأخرى.
           </p>
         </div>
       </div>

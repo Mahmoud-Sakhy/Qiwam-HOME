@@ -15,9 +15,9 @@ export default function DefaultModal() {
   };
   return (
     <div>
-      <ComponentCard title="Default Modal">
+      <ComponentCard title="النافذة المنبثقة الافتراضية">
         <Button size="sm" onClick={openModal}>
-          Open Modal
+          فتح النافذة المنبثقة
         </Button>
         <Modal
           isOpen={isOpen}
@@ -25,25 +25,23 @@ export default function DefaultModal() {
           className="max-w-[600px] p-5 lg:p-10"
         >
           <h4 className="font-semibold text-gray-800 mb-7 text-title-sm dark:text-white/90">
-            Modal Heading
+            عنوان النافذة المنبثقة
           </h4>
           <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque euismod est quis mauris lacinia pharetra. Sed a ligula
-            ac odio condimentum aliquet a nec nulla. Aliquam bibendum ex sit
-            amet ipsum rutrum feugiat ultrices enim quam.
+            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+            النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد
+            من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
           </p>
           <p className="mt-5 text-sm leading-6 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque euismod est quis mauris lacinia pharetra. Sed a ligula
-            ac odio.
+            إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى
+            زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية.
           </p>
           <div className="flex items-center justify-end w-full gap-3 mt-8">
             <Button size="sm" variant="outline" onClick={closeModal}>
-              Close
+              إغلاق
             </Button>
             <Button size="sm" onClick={handleSave}>
-              Save Changes
+              حفظ التغييرات
             </Button>
           </div>
         </Modal>

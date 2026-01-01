@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState,useCallback } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -18,9 +18,8 @@ import {
   UserCircleIcon,
 } from "../icons/index";
 
-
 type NavItem = {
-    icon: React.ReactNode;
+  icon: React.ReactNode;
   name: string;
   path?: string;
   subItems?: { name: string; path: string; pro?: boolean; new?: boolean }[];
@@ -30,76 +29,72 @@ const navItems: NavItem[] = [
   {
     icon: <GridIcon />,
     name: "احصائيات",
-   path: "/"
+    path: "/"
   },
-    {
+  {
     icon: <PlugInIcon />,
-    name: "Authentication",
+    name: "المصادقة",
     subItems: [
-      { name: "Sign In", path: "/signin", pro: false },
-      { name: "Sign Up", path: "/signup", pro: false },
+      { name: "تسجيل الدخول", path: "/signin", pro: false },
+      { name: "إنشاء حساب", path: "/signup", pro: false },
     ],
   },
-      {
+  {
     name: "الصفحة الرئيسية",
     icon: <PageIcon />,
-      path: "/home",
-    
+    path: "/home",
   },
   {
     icon: <CalenderIcon />,
-    name: "Calendar",
+    name: "التقويم",
     path: "/calendar",
   },
   {
     icon: <UserCircleIcon />,
-    name: "User Profile",
+    name: "الملف الشخصي",
     path: "/profile",
   },
-
   {
-    name: "Forms",
+    name: "النماذج",
     icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+    subItems: [{ name: "عناصر النموذج", path: "/form-elements", pro: false }],
   },
   {
-    name: "Tables",
+    name: "الجداول",
     icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
+    subItems: [{ name: "الجداول الأساسية", path: "/basic-tables", pro: false }],
   },
   {
-    name: "Pages",
+    name: "الصفحات",
     icon: <PageIcon />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+      { name: "صفحة فارغة", path: "/blank", pro: false },
+      { name: "خطأ 404", path: "/error-404", pro: false },
     ],
   },
-
 ];
 
 const othersItems: NavItem[] = [
   {
     icon: <PieChartIcon />,
-    name: "Charts",
+    name: "الرسوم البيانية",
     subItems: [
-      { name: "Line Chart", path: "/line-chart", pro: false },
-      { name: "Bar Chart", path: "/bar-chart", pro: false },
+      { name: "مخطط خطي", path: "/line-chart", pro: false },
+      { name: "مخطط شريطي", path: "/bar-chart", pro: false },
     ],
   },
   {
     icon: <BoxCubeIcon />,
-    name: "UI Elements",
+    name: "عناصر الواجهة",
     subItems: [
-      { name: "Alerts", path: "/alerts", pro: false },
-      { name: "Avatar", path: "/avatars", pro: false },
-      { name: "Badge", path: "/badge", pro: false },
-      { name: "Buttons", path: "/buttons", pro: false },
-      { name: "Images", path: "/images", pro: false },
-      { name: "Videos", path: "/videos", pro: false },
+      { name: "التنبيهات", path: "/alerts", pro: false },
+      { name: "الصور الرمزية", path: "/avatars", pro: false },
+      { name: "الشارات", path: "/badge", pro: false },
+      { name: "الأزرار", path: "/buttons", pro: false },
+      { name: "الصور", path: "/images", pro: false },
+      { name: "الفيديوهات", path: "/videos", pro: false },
     ],
   },
-
 ];
 
 const AppSidebar: React.FC = () => {
@@ -140,9 +135,9 @@ const AppSidebar: React.FC = () => {
               )}
               {(isExpanded || isHovered || isMobileOpen) && (
                 <ChevronDownIcon
-           className={`mr-auto w-5 h-5 transition-transform duration-200 ${
-    openSubmenu?.type === menuType && openSubmenu?.index === index
-      ? "-rotate-180 text-brand-500"
+                  className={`mr-auto w-5 h-5 transition-transform duration-200 ${
+                    openSubmenu?.type === menuType && openSubmenu?.index === index
+                      ? "-rotate-180 text-brand-500"
                       : ""
                   }`}
                 />
@@ -205,7 +200,7 @@ const AppSidebar: React.FC = () => {
                                 : "menu-dropdown-badge-inactive"
                             } menu-dropdown-badge `}
                           >
-                            new
+                            جديد
                           </span>
                         )}
                         {subItem.pro && (
@@ -216,7 +211,7 @@ const AppSidebar: React.FC = () => {
                                 : "menu-dropdown-badge-inactive"
                             } menu-dropdown-badge `}
                           >
-                            pro
+                            احترافي
                           </span>
                         )}
                       </span>
@@ -235,16 +230,13 @@ const AppSidebar: React.FC = () => {
     type: "main" | "others";
     index: number;
   } | null>(null);
-  const [subMenuHeight, setSubMenuHeight] = useState<Record<string, number>>(
-    {}
-  );
+  const [subMenuHeight, setSubMenuHeight] = useState<Record<string, number>>({});
   const subMenuRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
-  // const isActive = (path: string) => path === pathname;
-   const isActive = useCallback((path: string) => path === pathname, [pathname]);
+  const isActive = useCallback((path: string) => path === pathname, [pathname]);
 
   useEffect(() => {
-    // Check if the current path matches any submenu item
+    // التحقق مما إذا كان المسار الحالي يتطابق مع أي عنصر في القائمة الفرعية
     let submenuMatched = false;
     ["main", "others"].forEach((menuType) => {
       const items = menuType === "main" ? navItems : othersItems;
@@ -263,14 +255,14 @@ const AppSidebar: React.FC = () => {
       });
     });
 
-    // If no submenu item matches, close the open submenu
+    // إذا لم يتطابق أي عنصر في القائمة الفرعية، أغلق القائمة الفرعية المفتوحة
     if (!submenuMatched) {
       setOpenSubmenu(null);
     }
-  }, [pathname,isActive]);
+  }, [pathname, isActive]);
 
   useEffect(() => {
-    // Set the height of the submenu items when the submenu is opened
+    // تعيين ارتفاع عناصر القائمة الفرعية عند فتحها
     if (openSubmenu !== null) {
       const key = `${openSubmenu.type}-${openSubmenu.index}`;
       if (subMenuRefs.current[key]) {
@@ -296,17 +288,16 @@ const AppSidebar: React.FC = () => {
   };
 
   return (
-<aside
-  dir="rtl"
-  className={`fixed mt-16 flex flex-col lg:mt-0 top-0 px-5 left-0 bg-white dark:bg-gray-900 
-    text-gray-900 h-screen transition-all duration-300 ease-in-out z-50 border-r border-gray-200 
-    ${isExpanded || isMobileOpen ? "w-72.5" : isHovered ? "w-72.5" : "w-22.5"}
-    ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
-    lg:translate-x-0`}
-  onMouseEnter={() => !isExpanded && setIsHovered(true)}
-  onMouseLeave={() => setIsHovered(false)}
->
-
+    <aside
+      dir="rtl"
+      className={`fixed mt-16 flex flex-col lg:mt-0 top-0 px-5 left-0 bg-white dark:bg-gray-900 
+        text-gray-900 h-screen transition-all duration-300 ease-in-out z-50 border-r border-gray-200 
+        ${isExpanded || isMobileOpen ? "w-72.5" : isHovered ? "w-72.5" : "w-22.5"}
+        ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
+        lg:translate-x-0`}
+      onMouseEnter={() => !isExpanded && setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div
         className={`py-8 flex  ${
           !isExpanded && !isHovered ? "lg:justify-center" : "justify-start"
@@ -318,14 +309,14 @@ const AppSidebar: React.FC = () => {
               <Image
                 className="dark:hidden"
                 src="/images/logo/logo.svg"
-                alt="Logo"
+                alt="الشعار"
                 width={150}
                 height={40}
               />
               <Image
                 className="hidden dark:block"
                 src="/images/logo/logo-dark.svg"
-                alt="Logo"
+                alt="الشعار"
                 width={150}
                 height={40}
               />
@@ -333,7 +324,7 @@ const AppSidebar: React.FC = () => {
           ) : (
             <Image
               src="/images/logo/logo-icon.svg"
-              alt="Logo"
+              alt="الشعار"
               width={32}
               height={32}
             />
@@ -352,7 +343,7 @@ const AppSidebar: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Menu"
+                  "القائمة"
                 ) : (
                   <HorizontaLDots />
                 )}
@@ -369,7 +360,7 @@ const AppSidebar: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Others"
+                  "أخرى"
                 ) : (
                   <HorizontaLDots />
                 )}

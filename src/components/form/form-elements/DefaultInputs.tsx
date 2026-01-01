@@ -10,30 +10,30 @@ import DatePicker from '@/components/form/date-picker';
 export default function DefaultInputs() {
   const [showPassword, setShowPassword] = useState(false);
   const options = [
-    { value: "marketing", label: "Marketing" },
-    { value: "template", label: "Template" },
-    { value: "development", label: "Development" },
+    { value: "marketing", label: "التسويق" },
+    { value: "template", label: "القوالب" },
+    { value: "development", label: "التطوير" },
   ];
   const handleSelectChange = (value: string) => {
     console.log("Selected value:", value);
   };
   return (
-    <ComponentCard title="Default Inputs">
+    <ComponentCard title="الحقول الافتراضية">
       <div className="space-y-6">
         <div>
-          <Label>Input</Label>
+          <Label>حقل إدخال</Label>
           <Input type="text" />
         </div>
         <div>
-          <Label>Input with Placeholder</Label>
-          <Input type="text" placeholder="info@gmail.com" />
+          <Label>حقل إدخال مع نص توضيحي</Label>
+          <Input type="text" placeholder="info@example.com" />
         </div>
         <div>
-          <Label>Select Input</Label>
+          <Label>حقل اختيار</Label>
           <div className="relative">
             <Select
             options={options}
-            placeholder="Select an option"
+            placeholder="اختر خياراً"
             onChange={handleSelectChange}
             className="dark:bg-dark-900"
           />
@@ -43,11 +43,11 @@ export default function DefaultInputs() {
           </div>
         </div>
         <div>
-          <Label>Password Input</Label>
+          <Label>حقل كلمة المرور</Label>
           <div className="relative">
             <Input
               type={showPassword ? "text" : "password"}
-              placeholder="Enter your password"
+              placeholder="أدخل كلمة المرور"
             />
             <button
               onClick={() => setShowPassword(!showPassword)}
@@ -65,8 +65,8 @@ export default function DefaultInputs() {
         <div>
           <DatePicker
             id="date-picker"
-            label="Date Picker Input"
-            placeholder="Select a date"
+            label="حقل اختيار التاريخ"
+            placeholder="اختر تاريخاً"
             onChange={(dates, currentDateString) => {
               // Handle your logic
               console.log({ dates, currentDateString });
@@ -75,7 +75,7 @@ export default function DefaultInputs() {
         </div>
 
         <div>
-          <Label htmlFor="tm">Time Picker Input</Label>
+          <Label htmlFor="tm">حقل اختيار الوقت</Label>
           <div className="relative">
             <Input
               type="time"
@@ -89,11 +89,11 @@ export default function DefaultInputs() {
           </div>
         </div>
         <div>
-          <Label htmlFor="tm">Input with Payment</Label>
+          <Label htmlFor="tm">حقل إدخال مع دفع</Label>
           <div className="relative">
             <Input
               type="text"
-              placeholder="Card number"
+              placeholder="رقم البطاقة"
               className="pl-[62px]"
             />
             <span className="absolute left-0 top-1/2 flex h-11 w-[46px] -translate-y-1/2 items-center justify-center border-r border-gray-200 dark:border-gray-800">
